@@ -7,16 +7,13 @@
       :href="to"><slot/></a>
     <router-link v-else v-bind="$props" class="internal-link"><slot/></router-link>
   </template>
-  <script>
+  <script setup>
   import {RouterLink} from 'vue-router'
-  export default {
-    props:{
-      ...RouterLink.props
-    },
-    computed:{
-      isExternal(){
-        return typeof this.to === 'string' && this.to.startsWith('http')
-      }
-    }
-  }
+  import {computed} from 'vue'
+  const props = defineProps({
+    ...RouterLink.props
+  })
+  const isExternal = computed(()=>{
+        return typeof props.to === 'string' && props.to.startsWith('http')
+    })
   </script>

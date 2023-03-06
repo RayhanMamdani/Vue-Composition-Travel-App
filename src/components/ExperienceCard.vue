@@ -8,13 +8,11 @@
 
 </template>
 
-<script>
-export default {
-    props: {
-        experience: {
+<script setup>
+const props = defineProps({
+    experience: {
             type: Object,
             required: true
         }
-    }
-}
+})
 </script>

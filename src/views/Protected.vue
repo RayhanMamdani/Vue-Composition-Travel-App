@@ -8,19 +8,15 @@
     </div>
 </template>
 
-<script>
-export default {
-    data() {
-        return {
-            username: window.user
-        }
-    },
-
-    methods: {
-        logout() {
-            window.user = null;
-            this.$router.push({name: 'Home'});
-        }
-    }
+<script setup>
+// import { findProp } from '@vue/compiler-core';   
+import { computed } from 'vue';
+import { useRouter, useRoute } from 'vue-router'
+const username = computed(() => window.user)
+const router = useRouter()
+const route = useRoute()
+const logout = () => {
+    window.user = null
+    router.push({ name: 'Home' })
 }
 </script>
