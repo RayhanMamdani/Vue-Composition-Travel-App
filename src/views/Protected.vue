@@ -8,8 +8,7 @@
     </div>
 </template>
 
-<script setup>
-// import { findProp } from '@vue/compiler-core';   
+<script setup>  
 import { computed } from 'vue';
 import { useRouter, useRoute } from 'vue-router'
 const username = computed(() => window.user)

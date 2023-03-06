@@ -30,8 +30,8 @@
 
 <script setup>
     import sourceData from '../data.json'
-    import ExperienceCard from '@/components/ExperienceCard.vue'
-    import GoBack from "@/components/GoBack.vue"
+    import ExperienceCard from '../components/ExperienceCard.vue'
+    import GoBack from "../components/GoBack.vue"
     import {computed} from "vue"
     const props = defineProps({
         id: {type: Number, required: true},
