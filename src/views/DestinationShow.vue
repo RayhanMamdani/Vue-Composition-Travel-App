@@ -29,7 +29,7 @@
 </template>
 
 <script setup>
-    import sourceData from '@/data.json'
+    import sourceData from '../data.json'
     import ExperienceCard from '@/components/ExperienceCard.vue'
     import GoBack from "@/components/GoBack.vue"
     import {computed} from "vue"
