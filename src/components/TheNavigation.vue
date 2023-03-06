@@ -15,6 +15,6 @@
 
 </template>
 <script setup>
-    import sourceData from '@/data.json'
+    // import sourceData from '@/data.json'
     const destinations = sourceData.destinations
 </script>
